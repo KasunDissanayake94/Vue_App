@@ -3,13 +3,13 @@
     <form>
       <fieldset>
         <legend></legend>
-        <app-search></app-search>
+        <app-search @newDataSet="results = $event"></app-search>
       </fieldset>
     </form>
 
     <div class="row">
       <div class="col-md-12">
-        <app-result></app-result>
+        <app-result :resList = 'results' ></app-result>
       </div>
     </div>
   </div>
@@ -19,6 +19,15 @@
   import SearchArea from './SearchArea'
   import ResultArea from './ResultArea'
   export default {
+
+    data(){
+      return{
+
+        results:[]
+
+      }
+
+    },
     components: {
       'app-search': SearchArea,
       'app-result': ResultArea

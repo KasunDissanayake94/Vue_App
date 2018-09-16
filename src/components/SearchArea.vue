@@ -10,6 +10,12 @@
   import axios from 'axios';
   export default {
 
+    data(){
+      return{
+        newSet : []
+      }
+    },
+
 
     methods:{
       keyPressed(event){
@@ -18,12 +24,17 @@
         // Make a request for a user with a given ID
         axios.get("http://ws.audioscrobbler.com/2.0/?method=track.search&track="+ key +"&api_key=208408abe58141dbff3826cafc4a65b9&format=json")
           .then(response => {
-            console.log(response.data.results.trackmatches.track)
+
+            this.newSet = response.data.results.trackmatches.track;
+            console.log(response.data.results.trackmatches.track);
+
           })
           .catch(e => {
             this.errors.push(e)
           })
+        this.$emit('newDataSet',this.newSet);
       }
+
     }
   }
 </script>
