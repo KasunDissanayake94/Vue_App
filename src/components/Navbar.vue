@@ -8,16 +8,21 @@
     <div class="collapse navbar-collapse" id="navbarColor01">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item active">
-          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+          <router-link tag="li" to="/">
+          <a class="nav-link">Home <span class="sr-only">(current)</span></a>
+          </router-link>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">About</a>
+          <router-link tag="li" to="/artist">
+            <a class="nav-link">Artist</a>
+          </router-link>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Songs</a>
+          <router-link tag="li" to="/album">
+          <a class="nav-link">Album</a>
+          </router-link>
         </li>
       </ul>
-
     </div>
   </nav>
 </template>

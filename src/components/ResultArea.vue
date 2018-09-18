@@ -17,9 +17,8 @@
       </div>
       <div class="slide-footer">
         <span class="pull-right buttons">
-          <button type="button" class="btn btn-primary">Show more</button>
 
-                    <!--<router-link :to="{name: 'track', params: {  id:res.id }}"><button class="btn btn-sm btn-default"><i class="fa fa-fw fa-eye"></i> Show More</button></router-link>-->
+                    <router-link :to="{name: 'playtrack', params: {  id:res.mbid }}"><button type="button" class="btn btn-primary"><i class="fa fa-fw fa-eye"></i>Show more</button></router-link>
 
 
                 </span>
